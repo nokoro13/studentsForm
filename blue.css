@@ -1,0 +1,82 @@
+.form {
+    display: flex;
+    flex-direction: column;
+  }
+  body {
+    max-width: fit-content;
+    border: 5px solid black;
+    border-radius: 3rem 3rem 0rem 0rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+  }
+  h1 {
+    text-align: center;
+  }
+  fieldset {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: black 3px solid;
+  }
+  html {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(
+      circle,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(148, 187, 233, 1) 100%
+    );
+    background-color: black;
+  }
+  form {
+    width: 800px;
+    margin: auto;
+  }
+  fieldset {
+    margin-top: 1rem;
+  }
+  legend {
+    font-weight: bold;
+  }
+  #submit {
+    margin-left: 14px;
+  }
+
+td {
+    padding: .5rem;
+    background-color:palegoldenrod;
+    border: 2px solid white;
+}
+
+table {
+    border: solid 4px black;
+}
+
+.delete {
+    color: red;
+}
+
+.edit {
+    color: blue;
+}
+
+tr, th {
+    background-color: palegreen;
+    padding: 1rem;
+}
+
+label {
+  font-weight: bolder;
+}
+
+input {
+  padding: .25rem;
+  display: flex;
+  border-radius: .25rem; 
+  margin: .25rem;
+}
+
+input:hover {
+  border: solid paleturquoise;
+}
