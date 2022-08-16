@@ -7,7 +7,7 @@
     <title>Student Form</title>
     <link rel="stylesheet" href="blue.css">
     <?php
- emerson-final
+ 
         // session_start();
         
     ?>
