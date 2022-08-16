@@ -16,6 +16,8 @@
     $lastname				= trim($_POST['lastname']);
     $studentnumber		= trim($_POST['id']);
 
+    
+
     require_once('databaseconnection.php');
 
     $firstname = $db->real_escape_string($firstname);

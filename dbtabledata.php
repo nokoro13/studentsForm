@@ -7,7 +7,7 @@
     <title>Student Form</title>
     <link rel="stylesheet" href="blue.css">
     <?php
-
+        session_start();
     ?>
 </head>
 <body>
@@ -43,7 +43,10 @@
                 <td><?php echo $row['lastname']; ?></td>
                 <td><?php echo $row['id']; ?></td>
                 <td>
-                    <a href="edit.php?id=<?php echo $row['primary_key']; ?>" class='edit'>Edit</a>
+                    <?php
+                        $stuId = $row['id'];
+                    ?>
+                    <a  href="edit.php?&id=<?php echo $row['primary_key']; ?>&stuid=<?php echo $stuId; ?> " class='edit'>Edit</a>
                     <a href="delete.php?id=<?php echo $row['primary_key']; ?>" class='delete'>Delete</a>
                 </td>
             </tr>
