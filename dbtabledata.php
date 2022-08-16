@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Form</title>
+
     <link rel="stylesheet" href="blue.css">
     <?php
- emerson-final
+ 
         // session_start();
         
     ?>
+
 </head>
 <body>
     <div>
@@ -49,11 +51,20 @@
                 <td><?php echo $row['lastname']; ?></td>
                 <td><?php echo $row['id']; ?></td>
                 <td>
+
                     <?php
                         $stuId = $row['id'];
+                         $dltStudent = $row['id'];
                     ?>
                     <a  href="edit.php?&id=<?php echo $row['primary_key']; ?>&stuid=<?php echo $stuId; ?> " class='edit'>Edit</a>
-                    <a href="delete.php?id=<?php echo $row['primary_key']; ?>" class='delete'>Delete</a>
+                   
+
+                  
+                   
+                    
+                    
+                    <a href="delete.php?id=<?php echo $row['firstname'], $row['lastname'], $row['id'];?>&dltstudent=<?php echo $dltStudent; ?>" class='delete'>Delete</a>
+
                 </td>
             </tr>
             <?php
