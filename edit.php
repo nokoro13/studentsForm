@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <?php
-emerson-final
+
     require_once("dbinfo.php");
         $stuId = $_GET["stuid"];
         session_start();
@@ -31,7 +31,7 @@ emerson-final
     ?>
 </head>
 <body>
- emerson-final
+ 
   
     <main>
     
