@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <?php
+emerson-final
     require_once("dbinfo.php");
         $stuId = $_GET["stuid"];
         session_start();
@@ -26,9 +27,11 @@
 
 
 
+
     ?>
 </head>
 <body>
+ emerson-final
   
     <main>
     
@@ -45,6 +48,7 @@
             <input type="submit" name="edit-submit" value="Submit"/><br />
         </form>
         
+
     </main>
 </body>
 </html>
