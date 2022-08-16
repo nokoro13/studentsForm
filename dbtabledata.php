@@ -7,7 +7,9 @@
     <title>Student Form</title>
     <link rel="stylesheet" href="blue.css">
     <?php
-        session_start();
+ emerson-final
+        // session_start();
+        
     ?>
 </head>
 <body>
@@ -30,6 +32,10 @@
         <table>
     <?php
         
+       
+
+
+
         include('databaseconnection.php');
         $query=mysqli_query($db, "SELECT * FROM `students`");
         echo "<th>First Name</th>";
@@ -54,7 +60,8 @@
         }
     ?>
     </table>
-
-
+    <?php
+    
+?>
 </body>
 </html>
