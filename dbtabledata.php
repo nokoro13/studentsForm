@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Form</title>
-    <link rel="stylesheet" href="blue.css">   
+
+    <link rel="stylesheet" href="blue.css">
+    <?php
+ 
+        // session_start();
+        
+    ?>
+
 </head>
 <body>
     <div>
@@ -27,6 +34,10 @@
         <table>
     <?php
         
+       
+
+
+
         include('databaseconnection.php');
         $query=mysqli_query($db, "SELECT * FROM `students`");
         echo "<th>First Name</th>";
@@ -40,19 +51,28 @@
                 <td><?php echo $row['lastname']; ?></td>
                 <td><?php echo $row['id']; ?></td>
                 <td>
-                    <?php 
-                    $stuId = $row['id']; 
-                    $dltStudent = $row['id'];
+
+                    <?php
+                        $stuId = $row['id'];
+                         $dltStudent = $row['id'];
                     ?>
-                    <a href="edit.php?id=<?php echo $row['firstname'], $row['lastname'], $row['id'];?>&stuid=<?php echo $stuId; ?>" class='edit'>Edit</a>
+                    <a  href="edit.php?&id=<?php echo $row['primary_key']; ?>&stuid=<?php echo $stuId; ?> " class='edit'>Edit</a>
+                   
+
+                  
+                   
+                    
+                    
                     <a href="delete.php?id=<?php echo $row['firstname'], $row['lastname'], $row['id'];?>&dltstudent=<?php echo $dltStudent; ?>" class='delete'>Delete</a>
+
                 </td>
             </tr>
             <?php
         }
     ?>
     </table>
-
-
+    <?php
+    
+?>
 </body>
 </html>
