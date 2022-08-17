@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="blue.css">   
 </head>
 <body>
+    <h1>Administering DB from a form </h1>
+    <h2>This project is by: Noah and Emerson</h2>
     <div>
         <form method="POST" action="add.php">
                 <fieldset>
@@ -24,9 +26,9 @@
     </div>
 
 
+
         <table>
     <?php
-        
         include('databaseconnection.php');
         $query=mysqli_query($db, "SELECT * FROM `students`");
         echo "<th>First Name</th>";
@@ -42,16 +44,19 @@
                 <td>
                     <?php 
                     $stuId = $row['id']; 
-                    $dltStudent = $row['id'];
                     ?>
                     <a href="edit.php?id=<?php echo $row['firstname'], $row['lastname'], $row['id'];?>&stuid=<?php echo $stuId; ?>" class='edit'>Edit</a>
-                    <a href="delete.php?id=<?php echo $row['firstname'], $row['lastname'], $row['id'];?>&dltstudent=<?php echo $dltStudent; ?>" class='delete'>Delete</a>
+                    <a href="delete.php?id=<?php echo $row['primary_key'];?>" class='delete'>Delete</a>
                 </td>
             </tr>
             <?php
         }
     ?>
+
+ 
     </table>
+
+
 
 
 </body>

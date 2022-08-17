@@ -12,17 +12,16 @@
     </head>
     <body>
         <?php 
-        echo "<p>".$_GET["id"]."</p>";
-
+            $_SESSION['deleteid'] = $_GET["id"];
         ?>
         <main>
-            <form method="POST" action="dbtabledata.php">
+            <form method="POST" action="deletescript.php">
                 <fieldset>
                     <legend>Delete a record - are you sure?</legend>
-                    <input type="radio" name="radio" value="yesdlt" id="yesdlt">Yes</input>
-                    <input type="radio" name="radio" value="nodlt" id="nodlt">No</input>
+                    <input type="radio" name="radio" value="yesdlt">Yes</input>
+                    <input type="radio" name="radio" value="nodlt">No</input>
                 </fieldset>
-                <input type="submit" name="delete" value="Delete Record"/><br />
+                <input type="submit" name="delete" value="Delete Record"/><br />    
             </form>
         </main>
     </body>
