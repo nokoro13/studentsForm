@@ -15,6 +15,8 @@
 
 </head>
 <body>
+    <h1>Administering DB from a form </h1>
+    <h2>This project is by: Noah and Emerson</h2>
     <div>
         <form method="POST" action="add.php">
                 <fieldset>
@@ -31,12 +33,9 @@
     </div>
 
 
+
         <table>
     <?php
-        
-       
-
-
 
         include('databaseconnection.php');
         $query=mysqli_query($db, "SELECT * FROM `students`");
@@ -52,6 +51,7 @@
                 <td><?php echo $row['id']; ?></td>
                 <td>
 
+
                     <?php
                         $stuId = $row['id'];
                          $dltStudent = $row['id'];
@@ -65,14 +65,15 @@
                     
                     <a href="delete.php?id=<?php echo $row['firstname'], $row['lastname'], $row['id'];?>&dltstudent=<?php echo $dltStudent; ?>" class='delete'>Delete</a>
 
+
                 </td>
             </tr>
             <?php
         }
     ?>
+
+ 
     </table>
-    <?php
-    
-?>
+
 </body>
 </html>

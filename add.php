@@ -28,9 +28,12 @@
     $result2 = $db->query( $query2);
     //ensure our attempt to insert was a success
     if( $db->affected_rows == 0){
-        $_SESSION['errorMessages'] = "<p>There was a problem adding you to our database. Please try again.</p>";
-        header("Location: dbtabledata.php");
         die();
+    } else {
+       echo  "<h2>Record added to datebase</h2>";
+       echo  "<p>First Name: ".$firstname."</p>";
+       echo  "<p>Last Name: ".$lastname."</p>";
+       echo  "<p>Student Number: ".$studentnumber."</p>";
     }
     /* close MySQL connection */
     $db->close();
